@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/22c0e4622a.js" crossorigin="anonymous"></script>
+</head>
+<body>  
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img3.png" class="logo">  
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Dhananjay</span><br>Kumar from Jharkhand.</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------About Me--------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="f2-removebg-preview.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tit">About Me</h1>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas incidunt, at numquam fugiat cum animi, excepturi ut corrupti mollitia maxime ad, ab perferendis maiores itaque 
+                        deserunt suscipit omnis nostrum alias?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eum cum? Impedit nihil sed ullam quod harum ipsum maiores velit excepturi magni. Quos expedita 
+                        ipsa quibusdam asperiores ducimus mollitia optio.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Language</span><br>C,C++,Java</li>
+                                <li><span>Frame-Work</span><br>React,VS code</li>
+
+                                <li><span>Web Development</span><br>Web app Development</li>
+
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Mindtree</span><br>Web Application</li>
+                                <li><span>Frame-Work</span><br>React,VS code</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016</span><br>Secondary School.........................7CGPA</li>
+                                <li><span>2018</span><br>Higher Secondary School..................71%</li>
+                                
+                                <li><span>2018-2022</span><br>B.Tech..............................76%</li>
+                             </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------services------------------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> Projects </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="lloyd-dirks-kz8pEH4IsUo-unsplash1.jpg">
+                    <div class="layer">
+                        <h3> Weather Forcasting App</h3>
+                        <p>This is the Weather Forcasting app where you can show you 
+                            city tempature.
+                        </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="kenny-eliason-plrlb68XPqI-unsplash.jpg">
+                    <div class="layer">
+                        <h3> Music player App</h3>
+                        <p>This is the Weather Forcasting app where you can show you 
+                            city tempature.
+                        </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="lloyd-dirks-kz8pEH4IsUo-unsplash1.jpg">
+                    <div class="layer">
+                        <h3> Weather Forcasting App</h3>
+                        <p>This is the Weather Forcasting app where you can show you 
+                            city tempature.
+                        </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){  
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html> 
